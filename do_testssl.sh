@@ -28,7 +28,7 @@ echo "30 Seconds left!..."
 echo "10 seconds left!..."
   sleep 10
 echo "Now running testSSL against the target: $target"...
-  doctl compute ssh testSSL --ssh-command "docker run --rm -t milobahg/testssl $target" | tee testSSL_$target.txt
+  doctl compute ssh testSSL --ssh-command "docker run --rm -t milobahg/testssl --color=0 --quiet $target" | tee testSSL_$target.txt
 echo
 echo "...done!"
   sleep 1
